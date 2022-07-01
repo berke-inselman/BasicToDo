@@ -1,0 +1,138 @@
+body{
+    background: rgb(52,148,230);
+    background: linear-gradient(90deg, rgba(52,148,230,1) 0%, rgba(236,110,173,1) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ToDoContainer{
+    background-color:rgba(255, 255, 255, 0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80%;
+    height: auto;
+    margin: 20px 0;
+    padding: 15px 0;
+    border-radius: 20px;
+}
+.addToDoContainer{
+    width: 100%;
+    padding: 20px;
+}
+.addToDoContainer input[type=text]{
+    width: calc( 100% - 80px );
+    border-radius: 50px 0px 0px 50px;
+    border: none;
+    height: 50px;
+    padding: 0 20px;
+    float: left;
+    outline: none !important;
+}
+.addToDoContainer button{
+    width: 80px;
+    border-radius: 0px 50px 50px 0px;
+    border: none;
+    height: 50px;
+    padding: 0 20px;
+    display: block;
+    float: left;
+    background-color: #008aff;
+    color: #fff;
+    transition: 400ms ease;
+}
+.addToDoContainer button:hover{
+    background-color: #03559a;
+}
+.ToDoList{
+    width: 100%;
+    height: auto;
+}
+.ToDoWrapper{
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.ToDoWrapper li{
+    width: 100%;
+    height: 50px;
+    list-style: none;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-bottom: 10px;
+    border-radius: 50px;
+}
+button.clearAll{
+    width: calc( 100% - 40px);
+    height: 50px;
+    list-style: none;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:0 20px;
+    margin: 20px 0;
+    margin-bottom: 10px;
+    border-radius: 50px;
+    border: none;
+    background-color: #f00;
+    color: #fff;
+    transition: 400ms ease-in-out;
+}
+button.clearAll:hover{
+    background-color: #c00;
+}
+div.task input[type="checkbox"]{
+    margin-right: 10px;
+}
+.checked{
+    opacity: .5;
+}
+.optionsMenu{
+    position: relative;
+}
+.optionsDrop{
+    width: auto;
+    height: auto;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    right: 0;
+    z-index: 2;
+}
+.optionsDrop span{
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    width: 150px;
+    font-size: 12px;
+    background-color: #fff;
+    border-bottom: 1px solid #f2f2f2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    transition: 200ms ease-in-out;
+}
+.optionsDrop span:last-child{
+    border-bottom: none;
+    color: #c00;
+}
+.optionsDrop span:hover{
+    background-color: #2d91fc;
+    color: #fff;
+    cursor: pointer;
+}
+.optionsDrop span i{
+    margin-right: 10px;
+}
